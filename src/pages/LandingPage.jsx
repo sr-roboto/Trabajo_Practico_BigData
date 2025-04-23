@@ -88,12 +88,78 @@ function LandingPage() {
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">
               🕒 Evolución mensual de delitos
             </h2>
-            <p className="text-gray-600 mb-6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              amet cupiditate praesentium impedit dolor, vitae, nesciunt
-              possimus ex sit magni accusamus corporis deserunt iste quod
-              expedita recusandae molestiae, officia nobis.
+            <p className="text-gray-600 mb-4">
+              Este gráfico muestra la evolución mensual de delitos en una
+              determinada área geográfica, permitiendo visualizar cómo han
+              variado los diferentes tipos de delitos a lo largo del tiempo.
+              Cada punto en la gráfica representa el número de incidentes
+              registrados en un mes específico, con la diferencia en la altura
+              del área destacando los aumentos o disminuciones en la incidencia
+              delictiva.
             </p>
+            <h3 className="text-gray-800 font-bold mb-2.5">
+              ¿Cómo nos ayuda analizar estos datos?
+            </h3>
+            <div className="ml-5">
+              <ol className="list-decimal pl-5 text-pretty md:text-balance">
+                <li className="mb-2">
+                  <strong className="font-semibold ">
+                    Identificación de patrones estacionales:
+                  </strong>{' '}
+                  <span className="text-gray-600">
+                    Podemos observar si hay meses con mayor incidencia de
+                    delitos, lo que podría estar relacionado con factores
+                    estacionales (por ejemplo, las vacaciones, eventos
+                    especiales o cambios climáticos).
+                  </span>
+                </li>
+                <li className="mb-2">
+                  <strong className="font-semibold">
+                    Detección de picos de actividad delictiva:
+                  </strong>{' '}
+                  <span className="text-gray-600">
+                    Los picos en la gráfica indican períodos en los que los
+                    delitos aumentan significativamente, lo que puede ser una
+                    señal de que se requiere una intervención más enfocada en
+                    esos momentos.
+                  </span>
+                </li>
+                <li className="mb-2">
+                  <strong className="font-semibold">
+                    Evaluación de la efectividad de políticas públicas:
+                  </strong>{' '}
+                  <span className="text-gray-600">
+                    Al observar cómo varían los delitos a lo largo del tiempo,
+                    podemos medir si las medidas de seguridad o políticas
+                    implementadas están teniendo un impacto positivo, reduciendo
+                    la criminalidad en ciertos meses.
+                  </span>
+                </li>
+                <li className="mb-2">
+                  <strong className="font-semibold">
+                    Análisis de comportamiento territorial:
+                  </strong>{' '}
+                  <span className="text-gray-600">
+                    Si agrupamos los delitos por barrios o áreas, podríamos
+                    identificar si ciertos lugares experimentan incrementos o
+                    disminuciones significativas en la actividad delictiva, lo
+                    que permitiría una asignación más efectiva de recursos
+                    policiales y prevención.
+                  </span>
+                </li>
+                <li className="mb-2">
+                  <strong className="font-semibold">
+                    Predicción de futuras tendencias:
+                  </strong>{' '}
+                  <span className="text-gray-600">
+                    Al observar las tendencias de meses anteriores, se pueden
+                    hacer predicciones sobre futuros aumentos o disminuciones,
+                    ayudando a planificar recursos y estrategias de prevención.
+                  </span>
+                </li>
+              </ol>
+            </div>
+
             <div className="w-full flex justify-center">
               <div className="w-full max-w-3xl">
                 <LightweightChart />
