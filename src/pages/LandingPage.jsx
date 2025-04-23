@@ -5,26 +5,11 @@ import grafico2 from '../assets/images/grafico2.png';
 import grafico3 from '../assets/images/grafico3.png';
 import grafico4 from '../assets/images/grafico4.png';
 import grafico5 from '../assets/images/grafico5.png';
+import LightweightChart from '../components/LightweightChart';
+
 import NavBar from '../components/NavBar';
 
 function LandingPage() {
-  const fetchData = async () => {
-    try {
-      const response = await fetch(
-        'https://8080-idx-backend-bigdata-1745351433017.cluster-duylic2g3fbzerqpzxxbw6helm.cloudworkstations.dev/delitos'
-      ); // Reemplaza con tu URL de API
-      if (!response.ok) {
-        throw new Error('Error en la respuesta de la API');
-      }
-      const data = await response.json();
-      console.log(data); // Maneja los datos como necesites
-      return data; // Devuelve los datos para su uso posterior
-    } catch (error) {
-      console.error('Error al obtener los datos:', error);
-    }
-  };
-
-  const data = fetchData(); // Llama a la función para obtener datos
   return (
     <div className="min-h-screen bg-gray-300">
       {/* Encabezado */}
@@ -34,7 +19,6 @@ function LandingPage() {
         <div className="space-y-12">
           {/* Sección 1: Número de muertes por día del mes */}
           <section className="bg-white rounded-lg shadow-lg p-6">
-            <p>{data}</p>
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">
               🔍 Número de muertes por día del mes
             </h2>
@@ -110,14 +94,10 @@ function LandingPage() {
               possimus ex sit magni accusamus corporis deserunt iste quod
               expedita recusandae molestiae, officia nobis.
             </p>
-            <div className="flex justify-center">
-              <img
-                src={grafico4}
-                alt="Gráfico de distribución de delitos por hora"
-                width={700}
-                height={400}
-                className="rounded-lg"
-              />
+            <div className="w-full flex justify-center">
+              <div className="w-full max-w-3xl">
+                <LightweightChart />
+              </div>
             </div>
           </section>
 
