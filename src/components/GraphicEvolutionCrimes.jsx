@@ -61,7 +61,6 @@ export const GraphicEvolutionCrimes = ({ onMaxChange }) => {
     );
     if (onMaxChange) onMaxChange(maxItem);
   }, [selectedSubtipo]);
-
   return (
     <div className="w-full">
       <div className="mb-2">

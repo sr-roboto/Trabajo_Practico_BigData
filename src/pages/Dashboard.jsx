@@ -1,4 +1,5 @@
 import { EvolutionCrimePage } from './EvolutionCrimePage';
+import { CrimeByTimePage } from './CrimeByTimePage';
 import { AppPerformance } from '../components/app-performance';
 import { Insights } from '../components/Insights';
 import { UserFeedback } from '../components/user-feedback';
@@ -25,9 +26,9 @@ export default function Dashboard() {
             Gráficos de Delitos evolución mensual
           </button>
           <button
-            onClick={() => setActiveTab('app-performance')}
+            onClick={() => setActiveTab('crime-time')}
             className={`px-4 py-2 font-medium text-sm rounded-t-lg ${
-              activeTab === 'app-performance'
+              activeTab === 'crime-time'
                 ? 'bg-white border border-b-0 border-gray-200'
                 : 'text-gray-500 hover:text-gray-700'
             }`}
@@ -57,7 +58,7 @@ export default function Dashboard() {
         </div>
         <div className="p-4 bg-white rounded-lg shadow">
           {activeTab === 'evolution-crime' && <EvolutionCrimePage />}
-          {activeTab === 'app-performance' && <AppPerformance />}
+          {activeTab === 'crime-time' && <CrimeByTimePage />}
           {activeTab === 'insights' && <Insights />}
           {activeTab === 'user-feedback' && <UserFeedback />}
         </div>
