@@ -5,30 +5,18 @@ import grafico2 from '../assets/images/grafico2.png';
 import grafico3 from '../assets/images/grafico3.png';
 import grafico4 from '../assets/images/grafico4.png';
 import grafico5 from '../assets/images/grafico5.png';
+import NavBar from '../components/NavBar';
 
 function LandingPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-300">
       {/* Encabezado */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900 text-center">
-            Informe de Análisis de Delitos 2023
-          </h1>
-          <p className="mt-2 text-center text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-            placeat ex harum expedita quae dolores illum, odit dolorem
-            repudiandae inventore quis enim a corporis consequuntur id ea unde?
-            Repellendus, nobis?
-          </p>
-        </div>
-      </header>
-
+      <NavBar />
       {/* Contenido principal */}
       <main className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <div className="space-y-12">
           {/* Sección 1: Número de muertes por día del mes */}
-          <section className="bg-white rounded-lg shadow-md p-6">
+          <section className="bg-white rounded-lg shadow-lg p-6">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">
               🔍 Número de muertes por día del mes
             </h2>
