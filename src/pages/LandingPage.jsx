@@ -18,10 +18,13 @@ function LandingPage() {
       }
       const data = await response.json();
       console.log(data); // Maneja los datos como necesites
+      return data; // Devuelve los datos para su uso posterior
     } catch (error) {
       console.error('Error al obtener los datos:', error);
     }
   };
+
+  const data = fetchData(); // Llama a la función para obtener datos
   return (
     <div className="min-h-screen bg-gray-300">
       {/* Encabezado */}
