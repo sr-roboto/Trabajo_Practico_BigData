@@ -1,8 +1,7 @@
 import { EvolutionCrimePage } from './EvolutionCrimePage';
 import { CrimeByTimePage } from './CrimeByTimePage';
-import { AppPerformance } from '../components/app-performance';
-import { Insights } from '../components/Insights';
-import { UserFeedback } from '../components/user-feedback';
+import { CrimeComparisonPage } from './CrimeComparisonPage';
+import { AnnualCrimeNeighborhoodsPage } from './AnnualCrimeNeighborhoodsPage';
 import { useState } from 'react';
 
 export default function Dashboard() {
@@ -36,9 +35,9 @@ export default function Dashboard() {
             Delitos por franja horarias
           </button>
           <button
-            onClick={() => setActiveTab('insights')}
+            onClick={() => setActiveTab('crime-comparison')}
             className={`px-4 py-2 font-medium text-sm rounded-t-lg ${
-              activeTab === 'insights'
+              activeTab === 'crime-comparison'
                 ? 'bg-white border border-b-0 border-gray-200'
                 : 'text-gray-500 hover:text-gray-700'
             }`}
@@ -46,9 +45,9 @@ export default function Dashboard() {
             Comparativa de robo y hurto
           </button>
           <button
-            onClick={() => setActiveTab('user-feedback')}
+            onClick={() => setActiveTab('annual-crime-neighborhoods')}
             className={`px-4 py-2 font-medium text-sm rounded-t-lg ${
-              activeTab === 'user-feedback'
+              activeTab === 'annual-crime-neighborhoods'
                 ? 'bg-white border border-b-0 border-gray-200'
                 : 'text-gray-500 hover:text-gray-700'
             }`}
@@ -59,8 +58,10 @@ export default function Dashboard() {
         <div className="p-4 bg-white rounded-lg shadow">
           {activeTab === 'evolution-crime' && <EvolutionCrimePage />}
           {activeTab === 'crime-time' && <CrimeByTimePage />}
-          {activeTab === 'insights' && <Insights />}
-          {activeTab === 'user-feedback' && <UserFeedback />}
+          {activeTab === 'crime-comparison' && <CrimeComparisonPage />}
+          {activeTab === 'annual-crime-neighborhoods' && (
+            <AnnualCrimeNeighborhoodsPage />
+          )}
         </div>
       </div>
     </div>
