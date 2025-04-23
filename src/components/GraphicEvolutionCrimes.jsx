@@ -60,6 +60,9 @@ export const GraphicEvolutionCrimes = ({ onMaxChange }) => {
       series[0]
     );
     if (onMaxChange) onMaxChange(maxItem);
+
+    const totalCasos = series.reduce((acc, curr) => acc + curr.cantidad, 0);
+    if (onMaxChange) onMaxChange({ ...maxItem, total: totalCasos });
   }, [selectedSubtipo]);
   return (
     <div className="w-full">

@@ -11,6 +11,14 @@ export function EvolutionCrimePage() {
         <>
           <div className="bg-white p-4 rounded-lg border shadow-sm">
             <div className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <h3 className="text-sm font-medium">Casos totales</h3>
+            </div>
+            <div>
+              <p className="text-2xl font-bold">{maxItem.total}</p>
+            </div>
+          </div>
+          <div className="bg-white p-4 rounded-lg border shadow-sm">
+            <div className="flex flex-row items-center justify-between space-y-0 pb-2">
               <h3 className="text-sm font-medium">Día con más casos</h3>
             </div>
             <div>
@@ -20,7 +28,7 @@ export function EvolutionCrimePage() {
               </p>
             </div>
           </div>
-          <div className="bg-white p-4 rounded-lg border shadow-sm col-span-3">
+          <div className="bg-white p-4 rounded-lg border shadow-sm col-span-2">
             <div className="flex flex-row items-center justify-between space-y-0 pb-2">
               <h3 className="text-sm font-medium">Barrios afectados</h3>
             </div>
